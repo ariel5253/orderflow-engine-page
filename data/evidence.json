@@ -1,0 +1,55 @@
+{
+  "repoBase": "https://github.com/ariel5253/orderflow-engine-",
+  "branch": "main",
+  "sections": {
+    "a1": [
+      { "key": "breakdown", "ac": "AC-01, AC-02", "tests": [["api", "QuoteContractIT", "src/test/java/com/orderflow/engine/adapters/in/web/QuoteContractIT.java"], ["api", "GoldenPricingTest", "src/test/java/com/orderflow/engine/pricing/domain/GoldenPricingTest.java"]] },
+      { "key": "order", "ac": "AC-03, AC-15", "tests": [["api", "PricingPipelineOrderTest", "src/test/java/com/orderflow/engine/pricing/domain/PricingPipelineOrderTest.java"], ["api", "TierPrecedenceTest", "src/test/java/com/orderflow/engine/pricing/domain/lever/TierPrecedenceTest.java"]] },
+      { "key": "credit", "ac": "AC-16", "tests": [["api", "CreditAdvisoryTest", "src/test/java/com/orderflow/engine/quoting/CreditAdvisoryTest.java"]] },
+      { "key": "sealed", "ac": "AC-20, AC-21", "tests": [["api", "QuotePersistenceIT", "src/test/java/com/orderflow/engine/adapters/out/persistence/QuotePersistenceIT.java"], ["api", "QuoteConfirmRegressionIT", "src/test/java/com/orderflow/engine/ordering/QuoteConfirmRegressionIT.java"]] },
+      { "key": "noFloat", "ac": "AC-08, AC-09, AC-10", "tests": [["api", "DomainPurityArchTest", "src/test/java/com/orderflow/engine/architecture/DomainPurityArchTest.java"], ["api", "RoundingPolicyTest", "src/test/java/com/orderflow/engine/pricing/domain/RoundingPolicyTest.java"], ["api", "PriceScaleValidationIT", "src/test/java/com/orderflow/engine/adapters/out/persistence/PriceScaleValidationIT.java"]] },
+      { "key": "notHardcoded", "ac": "AC-11, AC-12", "tests": [["api", "GoldenPricingTest", "src/test/java/com/orderflow/engine/pricing/domain/GoldenPricingTest.java"]] },
+      { "key": "gt1", "ac": "AC-04", "tests": [["api", "GoldenPricingTest", "src/test/java/com/orderflow/engine/pricing/domain/GoldenPricingTest.java"], ["api", "gt01-two-tier-brackets", "src/test/resources/golden/gt01-two-tier-brackets", "tree"]] },
+      { "key": "gt2", "ac": "AC-05", "tests": [["api", "GoldenPricingTest", "src/test/java/com/orderflow/engine/pricing/domain/GoldenPricingTest.java"], ["api", "gt02-combo-no-loose-discount", "src/test/resources/golden/gt02-combo-no-loose-discount", "tree"]] },
+      { "key": "gt3", "ac": "AC-06", "tests": [["api", "GoldenPricingTest", "src/test/java/com/orderflow/engine/pricing/domain/GoldenPricingTest.java"], ["api", "gt03-gift", "src/test/resources/golden/gt03-gift", "tree"]] },
+      { "key": "gt4", "ac": "AC-07", "tests": [["api", "GoldenPricingTest", "src/test/java/com/orderflow/engine/pricing/domain/GoldenPricingTest.java"], ["api", "gt04-combo-with-taxes", "src/test/resources/golden/gt04-combo-with-taxes", "tree"]] },
+      { "key": "gt5", "ac": "AC-17", "tests": [["api", "GoldenQuoteTest", "src/test/java/com/orderflow/engine/quoting/GoldenQuoteTest.java"], ["api", "CreditLimitIT", "src/test/java/com/orderflow/engine/ordering/CreditLimitIT.java"]] },
+      { "key": "gt6", "ac": "AC-21", "tests": [["api", "QuoteConfirmRegressionIT", "src/test/java/com/orderflow/engine/ordering/QuoteConfirmRegressionIT.java"]] }
+    ],
+    "a2": [
+      { "key": "missingKey", "ac": "AC-23", "tests": [["api", "IdempotencyContractIT", "src/test/java/com/orderflow/engine/adapters/in/web/IdempotencyContractIT.java"]] },
+      { "key": "replay", "ac": "AC-24, AC-25", "tests": [["api", "IdempotencyReplayIT", "src/test/java/com/orderflow/engine/adapters/in/web/IdempotencyReplayIT.java"]] },
+      { "key": "concurrency", "ac": "AC-26, AC-27", "tests": [["api", "ConfirmOrderConcurrencyIT", "src/test/java/com/orderflow/engine/ordering/ConfirmOrderConcurrencyIT.java"]] },
+      { "key": "alreadyConfirmed", "ac": "AC-28", "tests": [["api", "QuoteAlreadyConfirmedIT", "src/test/java/com/orderflow/engine/adapters/in/web/QuoteAlreadyConfirmedIT.java"]] },
+      { "key": "failure", "ac": "AC-29, AC-30", "tests": [["api", "ConfirmOrderFailureInjectionIT", "src/test/java/com/orderflow/engine/ordering/ConfirmOrderFailureInjectionIT.java"]] },
+      { "key": "readable", "ac": "AC-31", "tests": [["api", "OrderReadYourWritesIT", "src/test/java/com/orderflow/engine/ordering/OrderReadYourWritesIT.java"]] },
+      { "key": "outboxWrite", "ac": "AC-32", "tests": [["api", "OutboxWriteIT", "src/test/java/com/orderflow/engine/ordering/OutboxWriteIT.java"]] },
+      { "key": "outboxRelay", "ac": "AC-33, AC-34, AC-35", "tests": [["api", "OutboxRelayIT", "src/test/java/com/orderflow/engine/outbox/OutboxRelayIT.java"]] },
+      { "key": "boundary", "ac": "AC-47", "tests": [["api", "TransactionBoundaryArchTest", "src/test/java/com/orderflow/engine/architecture/TransactionBoundaryArchTest.java"]] },
+      { "key": "model", "ac": "AC-36", "tests": [["api", "README", "README.md"], ["tools", "check-docs", "docs-check/check-docs.mjs"]] }
+    ],
+    "a3": [
+      { "key": "adr", "ac": "AC-40", "tests": [["api", "ADR-0001", "docs/adr/0001-order-pricing-and-confirmation.md"], ["tools", "check-docs", "docs-check/check-docs.mjs"]] }
+    ],
+    "delivery": [
+      { "key": "command", "ac": "AC-38", "tests": [["infra", "test-all.sh", "scripts/test-all.sh"], ["api", "mvnw", "mvnw"]] },
+      { "key": "readme", "ac": "AC-39", "tests": [["api", "README", "README.md"], ["tools", "check-docs", "docs-check/check-docs.mjs"]] },
+      { "key": "adr", "ac": "AC-40", "tests": [["api", "ADR-0001", "docs/adr/0001-order-pricing-and-confirmation.md"]] },
+      { "key": "history", "ac": "AC-41", "tests": [["api", "pull requests", "pulls?q=is%3Apr+is%3Amerged", "raw"]] }
+    ],
+    "front": [
+      { "key": "noTruncation", "ac": "AC-42", "tests": [["web", "screen-rules.spec.ts", "src/app/screen-rules.spec.ts"], ["web", "order-summary.spec.ts", "src/app/pages/order-summary/order-summary.spec.ts"]] },
+      { "key": "noHidden", "ac": "AC-43", "tests": [["web", "ui-action-bar.spec.ts", "src/app/ui/ui-action-bar/ui-action-bar.spec.ts"], ["web", "screen-rules.spec.ts", "src/app/screen-rules.spec.ts"]] },
+      { "key": "images", "ac": "AC-44", "tests": [["web", "ui-product-image.spec.ts", "src/app/ui/ui-product-image/ui-product-image.spec.ts"]] },
+      { "key": "prevention", "ac": "AC-45", "tests": [["web", "README", "README.md"]] },
+      { "key": "doubleTap", "ac": "AC-49", "tests": [["web", "confirm-idempotency.spec.ts", "src/app/pages/order-summary/confirm-idempotency.spec.ts"]] },
+      { "key": "flow", "ac": "AC-52", "tests": [["web", "history-read-your-writes.spec.ts", "src/app/pages/history/history-read-your-writes.spec.ts"], ["infra", "full-flow.spec.ts", "e2e/tests/full-flow.spec.ts"]] }
+    ],
+    "countries": [
+      { "key": "countryConfig", "ac": "AC-11", "tests": [["api", "GoldenPricingTest", "src/test/java/com/orderflow/engine/pricing/domain/GoldenPricingTest.java"]] },
+      { "key": "seeds", "ac": "AC-53", "tests": [["api", "ProductContractIT", "src/test/java/com/orderflow/engine/adapters/in/web/ProductContractIT.java"], ["api", "CountryOrderNumberIT", "src/test/java/com/orderflow/engine/ordering/CountryOrderNumberIT.java"]] },
+      { "key": "apiLanguage", "ac": "AC-19, AC-37", "tests": [["api", "LocalizedErrorIT", "src/test/java/com/orderflow/engine/adapters/in/web/LocalizedErrorIT.java"], ["api", "ErrorCatalogI18nTest", "src/test/java/com/orderflow/engine/adapters/in/web/ErrorCatalogI18nTest.java"]] },
+      { "key": "webLanguage", "ac": "AC-46", "tests": [["web", "i18n-keys.spec.ts", "src/app/i18n-keys.spec.ts"], ["web", "language.spec.ts", "src/app/language.spec.ts"]] }
+    ]
+  }
+}
