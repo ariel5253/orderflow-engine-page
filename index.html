@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orderflow Engine</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="style.css">
+  <script src="viewer.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="a11y.skip"></a>
+
+  <header class="topbar">
+    <a class="brand" href="#summary">
+      <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M7 12.5l3 3 7-7" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="brand__name" data-i18n="top.product"></span>
+      <span class="brand__sub" data-i18n="top.subtitle"></span>
+    </a>
+    <div class="topbar__actions">
+      <details class="mobile-nav">
+        <summary data-i18n="top.contents"></summary>
+        <div class="mobile-nav__panel" id="mobile-nav"></div>
+      </details>
+      <a class="topbar__link" href="#documents" data-i18n="top.documents"></a>
+      <div class="lang" role="group" data-i18n-attr="aria-label:a11y.langLabel">
+        <button type="button" data-lang="es" lang="es">ES</button>
+        <button type="button" data-lang="en" lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar" id="sidebar" data-i18n-attr="aria-label:a11y.nav">
+      <p class="sidebar__group" data-i18n="nav.groupStart"></p>
+      <a href="#summary" data-i18n="nav.summary"></a>
+      <a href="#evaluate" data-i18n="nav.evaluate"></a>
+      <p class="sidebar__group" data-i18n="nav.groupChallenges"></p>
+      <a href="#a1" data-i18n="nav.a1"></a>
+      <a href="#a2" data-i18n="nav.a2"></a>
+      <a href="#a3" data-i18n="nav.a3"></a>
+      <a href="#delivery" data-i18n="nav.delivery"></a>
+      <a href="#front" data-i18n="nav.front"></a>
+      <a href="#countries" data-i18n="nav.countries"></a>
+      <p class="sidebar__group" data-i18n="nav.groupMaterial"></p>
+      <a href="#documents" data-i18n="nav.documents"></a>
+      <a href="#repos" data-i18n="nav.repos"></a>
+    </nav>
+
+    <main id="main" class="content">
+      <section id="summary" class="block">
+        <h1 data-i18n="summary.title"></h1>
+        <p class="lead" data-i18n="summary.lead"></p>
+        <p class="meta" data-i18n="summary.date"></p>
+        <dl class="kpis">
+          <div><dt data-i18n="summary.kpiChallengesLabel"></dt><dd data-i18n="summary.kpiChallenges"></dd></div>
+          <div><dt data-i18n="summary.kpiTestsLabel"></dt><dd data-i18n="summary.kpiTests"></dd></div>
+          <div><dt data-i18n="summary.kpiCriteriaLabel"></dt><dd data-i18n="summary.kpiCriteria"></dd></div>
+          <div><dt data-i18n="summary.kpiCountriesLabel"></dt><dd data-i18n="summary.kpiCountries"></dd></div>
+        </dl>
+        <div class="table-wrap">
+          <table class="table table--summary">
+            <thead><tr><th data-i18n="summary.colChallenge"></th><th data-i18n="summary.colAsked"></th><th data-i18n="summary.colStatus"></th><th data-i18n="summary.colEvidence"></th></tr></thead>
+            <tbody>
+              <tr><td><a href="#a1" data-i18n="summary.rowA1"></a></td><td data-i18n="summary.rowA1Asked"></td><td><span class="badge" data-badge></span></td><td data-i18n="summary.rowA1Evidence"></td></tr>
+              <tr><td><a href="#a2" data-i18n="summary.rowA2"></a></td><td data-i18n="summary.rowA2Asked"></td><td><span class="badge" data-badge></span></td><td data-i18n="summary.rowA2Evidence"></td></tr>
+              <tr><td><a href="#a3" data-i18n="summary.rowA3"></a></td><td data-i18n="summary.rowA3Asked"></td><td><span class="badge" data-badge></span></td><td data-i18n="summary.rowA3Evidence"></td></tr>
+              <tr><td><a href="#delivery" data-i18n="summary.rowDelivery"></a></td><td data-i18n="summary.rowDeliveryAsked"></td><td><span class="badge" data-badge></span></td><td data-i18n="summary.rowDeliveryEvidence"></td></tr>
+              <tr><td><a href="#front" data-i18n="summary.rowFront"></a></td><td data-i18n="summary.rowFrontAsked"></td><td><span class="badge" data-badge></span></td><td data-i18n="summary.rowFrontEvidence"></td></tr>
+              <tr><td><a href="#countries" data-i18n="summary.rowCountries"></a></td><td data-i18n="summary.rowCountriesAsked"></td><td><span class="badge" data-badge></span></td><td data-i18n="summary.rowCountriesEvidence"></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="evaluate" class="block">
+        <h2 data-i18n="evaluate.title"></h2>
+        <p class="lead" data-i18n="evaluate.lead"></p>
+        <ol class="steps">
+          <li>
+            <h3 data-i18n="evaluate.s1Title"></h3>
+            <p data-i18n="evaluate.s1Text"></p>
+            <p><a class="arrow-link" href="https://github.com/ariel5253/orderflow-engine-api/blob/main/README.es.md" data-href-es="https://github.com/ariel5253/orderflow-engine-api/blob/main/README.es.md" data-href-en="https://github.com/ariel5253/orderflow-engine-api/blob/main/README.md" data-i18n="evaluate.s1Link"></a></p>
+          </li>
+          <li>
+            <h3 data-i18n="evaluate.s2Title"></h3>
+            <p data-i18n="evaluate.s2Text"></p>
+            <p class="link-row"><a class="arrow-link" href="documents/0001-order-pricing-and-confirmation.es.pdf" data-i18n="a3.pdfEs"></a><a class="arrow-link" href="documents/0001-order-pricing-and-confirmation.pdf" data-i18n="a3.pdfEn"></a></p>
+          </li>
+          <li>
+            <h3 data-i18n="evaluate.s3Title"></h3>
+            <p data-i18n="evaluate.s3Text"></p>
+            <div class="code"><pre><code>for r in api web infra docs tools app; do git clone https://github.com/ariel5253/orderflow-engine-$r.git; done
+bash orderflow-engine-infra/scripts/test-all.sh</code></pre></div>
+          </li>
+          <li>
+            <h3 data-i18n="evaluate.s4Title"></h3>
+            <p data-i18n="evaluate.s4Text"></p>
+            <div class="code"><pre><code>cd orderflow-engine-infra
+docker compose up --build -d</code></pre></div>
+          </li>
+          <li>
+            <h3 data-i18n="evaluate.s5Title"></h3>
+            <p data-i18n="evaluate.s5Text"></p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="a1" class="block challenge">
+        <p class="kicker" data-i18n="a1.kicker"></p>
+        <h2 data-i18n="a1.title"></h2>
+        <p class="status"><span class="badge" data-badge></span><span data-i18n="a1.status"></span></p>
+        <h3 data-i18n="common.asked"></h3>
+        <blockquote class="quote-block"><p data-i18n="a1.quote"></p><cite data-i18n="common.quoteSource"></cite></blockquote>
+        <h3 data-i18n="common.how"></h3>
+        <ul class="bullets" data-i18n-list="a1.how"></ul>
+        <h4 data-i18n="a1.orderTitle"></h4>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th data-i18n="a1.colStep"></th><th data-i18n="a1.colLever"></th><th data-i18n="a1.colWhy"></th></tr></thead>
+            <tbody>
+              <tr><td class="num">1</td><td data-i18n="a1.l1"></td><td data-i18n="a1.w1"></td></tr>
+              <tr><td class="num">2</td><td data-i18n="a1.l2"></td><td data-i18n="a1.w2"></td></tr>
+              <tr><td class="num">3</td><td data-i18n="a1.l3"></td><td data-i18n="a1.w3"></td></tr>
+              <tr><td class="num">4</td><td data-i18n="a1.l4"></td><td data-i18n="a1.w4"></td></tr>
+              <tr><td class="num">5</td><td data-i18n="a1.l5"></td><td data-i18n="a1.w5"></td></tr>
+              <tr><td class="num">6</td><td data-i18n="a1.l6"></td><td data-i18n="a1.w6"></td></tr>
+              <tr><td class="num">7</td><td data-i18n="a1.l7"></td><td data-i18n="a1.w7"></td></tr>
+              <tr><td class="num">8</td><td data-i18n="a1.l8"></td><td data-i18n="a1.w8"></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 data-i18n="common.evidence"></h3>
+        <p class="note" data-i18n="common.evidenceNote"></p>
+        <div class="table-wrap"><table class="table table--evidence" data-evidence="a1"></table></div>
+        <div class="panel">
+          <div class="panel__text">
+            <h4 data-i18n="a1.tryTitle"></h4>
+            <p data-i18n="a1.tryText"></p>
+          </div>
+          <div class="quote" aria-live="polite">
+            <p class="quote__store" data-i18n="quote.store"></p>
+            <div class="quote__row">
+              <span class="quote__name" id="cola-name"></span>
+              <span class="quote__unit" id="cola-unit"></span>
+              <span class="stepper">
+                <button type="button" class="stepper__button" id="cola-less" data-i18n-attr="aria-label:a11y.colaLess">−</button>
+                <output class="stepper__value" id="cola-qty">40</output>
+                <button type="button" class="stepper__button" id="cola-more" data-i18n-attr="aria-label:a11y.colaMore">+</button>
+              </span>
+            </div>
+            <div class="quote__row">
+              <span class="quote__name" id="chips-name"></span>
+              <span class="quote__unit" id="chips-unit"></span>
+              <button type="button" class="switch" id="chips" role="switch" aria-checked="true" data-i18n-attr="aria-label:a11y.chipsToggle">
+                <span class="switch__on" data-i18n="quote.withChips"></span>
+                <span class="switch__off" data-i18n="quote.withoutChips"></span>
+              </button>
+            </div>
+            <dl class="quote__lines">
+              <div class="quote__line"><dt data-i18n="quote.gross"></dt><dd id="q-gross">—</dd></div>
+              <div class="quote__line quote__line--minus" id="row-combo"><dt data-i18n="quote.combo"></dt><dd id="q-combo">—</dd></div>
+              <div class="quote__line quote__line--minus" id="row-tier"><dt data-i18n="quote.tier"></dt><dd id="q-tier">—</dd></div>
+              <div class="quote__line quote__line--gift" id="row-gift"><dt><span data-i18n="quote.gift"></span> · <span id="q-gift-name"></span></dt><dd data-i18n="quote.free"></dd></div>
+              <div class="quote__line"><dt data-i18n="quote.taxes"></dt><dd id="q-taxes">—</dd></div>
+              <div class="quote__line quote__line--total"><dt data-i18n="quote.total"></dt><dd id="q-total">—</dd></div>
+            </dl>
+          </div>
+        </div>
+        <p class="read-more"><span data-i18n="common.readMore"></span>
+          <a href="https://github.com/ariel5253/orderflow-engine-api/blob/main/README.es.md#orden-de-las-palancas" data-href-es="https://github.com/ariel5253/orderflow-engine-api/blob/main/README.es.md#orden-de-las-palancas" data-href-en="https://github.com/ariel5253/orderflow-engine-api/blob/main/README.md#lever-order" data-i18n="a1.readme"></a>
+          <a href="https://github.com/ariel5253/orderflow-engine-api/blob/main/README.es.md#política-de-redondeo" data-href-es="https://github.com/ariel5253/orderflow-engine-api/blob/main/README.es.md#política-de-redondeo" data-href-en="https://github.com/ariel5253/orderflow-engine-api/blob/main/README.md#rounding-policy" data-i18n="a1.rounding"></a>
+          <a href="https://github.com/ariel5253/orderflow-engine-api/tree/main/src/test/resources/golden" data-i18n="a1.golden"></a>
+        </p>
+      </section>
+
+      <section id="a2" class="block challenge">
+        <p class="kicker" data-i18n="a2.kicker"></p>
+        <h2 data-i18n="a2.title"></h2>
+        <p class="status"><span class="badge" data-badge></span><span data-i18n="a2.status"></span></p>
+        <h3 data-i18n="common.asked"></h3>
+        <blockquote class="quote-block"><p data-i18n="a2.quote"></p><cite data-i18n="common.quoteSource"></cite></blockquote>
+        <h3 data-i18n="common.how"></h3>
+        <ul class="bullets" data-i18n-list="a2.how"></ul>
+        <h3 data-i18n="common.evidence"></h3>
+        <p class="note" data-i18n="common.evidenceNote"></p>
+        <div class="table-wrap"><table class="table table--evidence" data-evidence="a2"></table></div>
+        <h4 data-i18n="a2.transcriptTitle"></h4>
+        <p data-i18n="a2.transcriptText"></p>
+        <div class="code"><pre><code>POST /api/v1/orders
+Idempotency-Key: 7c0f4e1a-2b3d-4e5f-8a9b-1c2d3e4f5a6b
+{"quoteId":"01a14ad6-caf4-7da7-aad9-3504cf220f3d","expectedTotal":{"amount":"115647","currency":"COP"}}
+
+HTTP/1.1 201
+Location: /api/v1/orders/01a14ad6-cbdd-7dc6-bdd5-e7a646128210
+{"orderNumber":"CO-000007","status":"CONFIRMED","confirmedAt":"2026-10-17T17:09:13.289358Z", …}
+
+POST /api/v1/orders
+Idempotency-Key: 7c0f4e1a-2b3d-4e5f-8a9b-1c2d3e4f5a6b
+{"quoteId":"01a14ad6-caf4-7da7-aad9-3504cf220f3d","expectedTotal":{"amount":"115647","currency":"COP"}}
+
+HTTP/1.1 201
+Location: /api/v1/orders/01a14ad6-cbdd-7dc6-bdd5-e7a646128210
+Idempotent-Replayed: true
+{"orderNumber":"CO-000007","status":"CONFIRMED","confirmedAt":"2026-10-17T17:09:13.289358Z", …}</code></pre></div>
+        <p class="read-more"><span data-i18n="common.readMore"></span>
+          <a href="https://github.com/ariel5253/orderflow-engine-api/blob/main/README.es.md#modelo-de-consistencia" data-href-es="https://github.com/ariel5253/orderflow-engine-api/blob/main/README.es.md#modelo-de-consistencia" data-href-en="https://github.com/ariel5253/orderflow-engine-api/blob/main/README.md#consistency-model" data-i18n="a2.readme"></a>
+        </p>
+      </section>
+
+      <section id="a3" class="block challenge">
+        <p class="kicker" data-i18n="a3.kicker"></p>
+        <h2 data-i18n="a3.title"></h2>
+        <p class="status"><span class="badge" data-badge></span><span data-i18n="a3.status"></span></p>
+        <h3 data-i18n="common.asked"></h3>
+        <blockquote class="quote-block"><p data-i18n="a3.quote"></p><cite data-i18n="common.quoteSource"></cite></blockquote>
+        <h3 data-i18n="common.how"></h3>
+        <ul class="bullets" data-i18n-list="a3.how"></ul>
+        <h3 data-i18n="common.evidence"></h3>
+        <div class="table-wrap"><table class="table table--evidence" data-evidence="a3"></table></div>
+        <p class="link-row">
+          <a class="button" href="documents/0001-order-pricing-and-confirmation.es.pdf" data-i18n="a3.pdfEs"></a>
+          <a class="button button--secondary" href="documents/0001-order-pricing-and-confirmation.pdf" data-i18n="a3.pdfEn"></a>
+          <a class="arrow-link" href="https://github.com/ariel5253/orderflow-engine-api/blob/main/docs/adr/0001-order-pricing-and-confirmation.es.md" data-href-es="https://github.com/ariel5253/orderflow-engine-api/blob/main/docs/adr/0001-order-pricing-and-confirmation.es.md" data-href-en="https://github.com/ariel5253/orderflow-engine-api/blob/main/docs/adr/0001-order-pricing-and-confirmation.md" data-i18n="a3.source"></a>
+        </p>
+      </section>
+
+      <section id="delivery" class="block challenge">
+        <p class="kicker" data-i18n="delivery.kicker"></p>
+        <h2 data-i18n="delivery.title"></h2>
+        <p class="status"><span class="badge" data-badge></span><span data-i18n="delivery.status"></span></p>
+        <h3 data-i18n="common.asked"></h3>
+        <blockquote class="quote-block"><p data-i18n="delivery.quote"></p><cite data-i18n="common.quoteSource"></cite></blockquote>
+        <h3 data-i18n="common.how"></h3>
+        <ul class="bullets" data-i18n-list="delivery.how"></ul>
+        <h4 data-i18n="delivery.phasesTitle"></h4>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th data-i18n="delivery.colPhase"></th><th data-i18n="delivery.colTasks"></th><th data-i18n="delivery.colClosed"></th></tr></thead>
+            <tbody>
+              <tr><td data-i18n="delivery.p1"></td><td class="mono">T-00</td><td class="num">2026-10-14</td></tr>
+              <tr><td data-i18n="delivery.p2"></td><td class="mono">T-01</td><td class="num">2026-10-15</td></tr>
+              <tr><td data-i18n="delivery.p3"></td><td class="mono">T-02 … T-16, T-18</td><td class="num">2026-10-15</td></tr>
+              <tr><td data-i18n="delivery.p4"></td><td class="mono">T-17, T-19, T-20</td><td class="num">2026-10-17</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 data-i18n="common.evidence"></h3>
+        <div class="table-wrap"><table class="table table--evidence" data-evidence="delivery"></table></div>
+      </section>
+
+      <section id="front" class="block challenge">
+        <p class="kicker" data-i18n="front.kicker"></p>
+        <h2 data-i18n="front.title"></h2>
+        <p class="status"><span class="badge" data-badge></span><span data-i18n="front.status"></span></p>
+        <h3 data-i18n="common.asked"></h3>
+        <blockquote class="quote-block"><p data-i18n="front.quote"></p><cite data-i18n="common.quoteSource"></cite></blockquote>
+        <h3 data-i18n="common.how"></h3>
+        <ul class="bullets" data-i18n-list="front.how"></ul>
+        <h4 data-i18n="front.galleryTitle"></h4>
+        <div class="gallery">
+          <figure><a href="screenshots/es/02-catalog.png" data-href-lang="screenshots/{lang}/02-catalog.png" data-i18n-attr="aria-label:a11y.openImage"><img src="screenshots/es/02-catalog.png" data-src-lang="screenshots/{lang}/02-catalog.png" alt="" data-i18n-attr="alt:front.shot2" loading="lazy"></a><figcaption data-i18n="front.shot2"></figcaption></figure>
+          <figure><a href="screenshots/es/04-quote-summary.png" data-href-lang="screenshots/{lang}/04-quote-summary.png" data-i18n-attr="aria-label:a11y.openImage"><img src="screenshots/es/04-quote-summary.png" data-src-lang="screenshots/{lang}/04-quote-summary.png" alt="" data-i18n-attr="alt:front.shot4" loading="lazy"></a><figcaption data-i18n="front.shot4"></figcaption></figure>
+          <figure><a href="screenshots/es/05-quote-levers.png" data-href-lang="screenshots/{lang}/05-quote-levers.png" data-i18n-attr="aria-label:a11y.openImage"><img src="screenshots/es/05-quote-levers.png" data-src-lang="screenshots/{lang}/05-quote-levers.png" alt="" data-i18n-attr="alt:front.shot5" loading="lazy"></a><figcaption data-i18n="front.shot5"></figcaption></figure>
+          <figure><a href="screenshots/es/06-order-confirmed.png" data-href-lang="screenshots/{lang}/06-order-confirmed.png" data-i18n-attr="aria-label:a11y.openImage"><img src="screenshots/es/06-order-confirmed.png" data-src-lang="screenshots/{lang}/06-order-confirmed.png" alt="" data-i18n-attr="alt:front.shot6" loading="lazy"></a><figcaption data-i18n="front.shot6"></figcaption></figure>
+          <figure><a href="screenshots/es/07-my-orders.png" data-href-lang="screenshots/{lang}/07-my-orders.png" data-i18n-attr="aria-label:a11y.openImage"><img src="screenshots/es/07-my-orders.png" data-src-lang="screenshots/{lang}/07-my-orders.png" alt="" data-i18n-attr="alt:front.shot7" loading="lazy"></a><figcaption data-i18n="front.shot7"></figcaption></figure>
+          <figure><a href="screenshots/es/09-mobile-summary.png" data-href-lang="screenshots/{lang}/09-mobile-summary.png" data-i18n-attr="aria-label:a11y.openImage"><img class="is-phone" src="screenshots/es/09-mobile-summary.png" data-src-lang="screenshots/{lang}/09-mobile-summary.png" alt="" data-i18n-attr="alt:front.shot9" loading="lazy"></a><figcaption data-i18n="front.shot9"></figcaption></figure>
+        </div>
+        <h3 data-i18n="common.evidence"></h3>
+        <div class="table-wrap"><table class="table table--evidence" data-evidence="front"></table></div>
+        <p class="read-more"><span data-i18n="common.readMore"></span>
+          <a href="https://github.com/ariel5253/orderflow-engine-web/blob/main/README.es.md#prevención-a-nivel-de-componente" data-href-es="https://github.com/ariel5253/orderflow-engine-web/blob/main/README.es.md#prevención-a-nivel-de-componente" data-href-en="https://github.com/ariel5253/orderflow-engine-web/blob/main/README.md#prevention-at-component-level" data-i18n="front.readme"></a>
+        </p>
+      </section>
+
+      <section id="countries" class="block challenge">
+        <p class="kicker" data-i18n="countries.kicker"></p>
+        <h2 data-i18n="countries.title"></h2>
+        <p class="status"><span class="badge" data-badge></span><span data-i18n="countries.status"></span></p>
+        <h3 data-i18n="common.asked"></h3>
+        <blockquote class="quote-block"><p data-i18n="countries.quote"></p><cite data-i18n="common.quoteSource"></cite></blockquote>
+        <h3 data-i18n="common.how"></h3>
+        <ul class="bullets" data-i18n-list="countries.how"></ul>
+        <div class="table-wrap">
+          <table class="table table--compact">
+            <thead><tr><th data-i18n="countries.colTenant"></th><th data-i18n="countries.colCountry"></th><th data-i18n="countries.colCurrency"></th><th data-i18n="countries.colScale"></th></tr></thead>
+            <tbody>
+              <tr><td class="mono">co-alpha</td><td data-i18n="countries.co"></td><td class="mono">COP</td><td class="num">0</td></tr>
+              <tr><td class="mono">ec-alpha</td><td data-i18n="countries.ec"></td><td class="mono">USD</td><td class="num">2</td></tr>
+              <tr><td class="mono">gt-alpha</td><td data-i18n="countries.gt"></td><td class="mono">GTQ</td><td class="num">2</td></tr>
+              <tr><td class="mono">pe-alpha</td><td data-i18n="countries.pe"></td><td class="mono">PEN</td><td class="num">2</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 data-i18n="common.evidence"></h3>
+        <div class="table-wrap"><table class="table table--evidence" data-evidence="countries"></table></div>
+      </section>
+
+      <section id="documents" class="block">
+        <h2 data-i18n="documents.title"></h2>
+        <p class="lead" data-i18n="documents.lead"></p>
+        <div class="table-wrap">
+          <table class="table table--docs">
+            <thead><tr><th data-i18n="documents.colDocument"></th><th data-i18n="documents.colPurpose"></th><th data-i18n="documents.colEs"></th><th data-i18n="documents.colEn"></th></tr></thead>
+            <tbody>
+              <tr><td class="strong" data-i18n="documents.userManual"></td><td data-i18n="documents.userManualPurpose"></td><td><a class="file" href="documents/user-manual.es.pdf" data-i18n="documents.pdf"></a></td><td><a class="file" href="documents/user-manual.pdf" data-i18n="documents.pdf"></a></td></tr>
+              <tr><td class="strong" data-i18n="documents.technicalManual"></td><td data-i18n="documents.technicalManualPurpose"></td><td><a class="file" href="documents/technical-manual.es.pdf" data-i18n="documents.pdf"></a></td><td><a class="file" href="documents/technical-manual.pdf" data-i18n="documents.pdf"></a></td></tr>
+              <tr><td class="strong" data-i18n="documents.architecture"></td><td data-i18n="documents.architecturePurpose"></td><td><a class="file" href="documents/architecture-report.es.pdf" data-i18n="documents.pdf"></a></td><td><a class="file" href="documents/architecture-report.pdf" data-i18n="documents.pdf"></a></td></tr>
+              <tr><td class="strong" data-i18n="documents.walkthrough"></td><td data-i18n="documents.walkthroughPurpose"></td><td><a class="file" href="documents/solution-walkthrough.es.pdf" data-i18n="documents.pdf"></a></td><td><a class="file" href="documents/solution-walkthrough.pdf" data-i18n="documents.pdf"></a></td></tr>
+              <tr><td class="strong" data-i18n="documents.deck"></td><td data-i18n="documents.deckPurpose"></td><td><a class="file" href="documents/presentation.es.pptx" data-i18n="documents.pptx"></a></td><td><a class="file" href="documents/presentation.pptx" data-i18n="documents.pptx"></a></td></tr>
+              <tr><td class="strong" data-i18n="documents.adr"></td><td data-i18n="documents.adrPurpose"></td><td><a class="file" href="documents/0001-order-pricing-and-confirmation.es.pdf" data-i18n="documents.pdf"></a></td><td><a class="file" href="documents/0001-order-pricing-and-confirmation.pdf" data-i18n="documents.pdf"></a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="repos" class="block">
+        <h2 data-i18n="repos.title"></h2>
+        <p class="lead" data-i18n="repos.lead"></p>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th data-i18n="repos.colRepo"></th><th data-i18n="repos.colContent"></th></tr></thead>
+            <tbody>
+              <tr><td><a class="mono" href="https://github.com/ariel5253/orderflow-engine-api">orderflow-engine-api</a></td><td data-i18n="repos.api"></td></tr>
+              <tr><td><a class="mono" href="https://github.com/ariel5253/orderflow-engine-web">orderflow-engine-web</a></td><td data-i18n="repos.web"></td></tr>
+              <tr><td><a class="mono" href="https://github.com/ariel5253/orderflow-engine-infra">orderflow-engine-infra</a></td><td data-i18n="repos.infra"></td></tr>
+              <tr><td><a class="mono" href="https://github.com/ariel5253/orderflow-engine-docs">orderflow-engine-docs</a></td><td data-i18n="repos.docs"></td></tr>
+              <tr><td><a class="mono" href="https://github.com/ariel5253/orderflow-engine-tools">orderflow-engine-tools</a></td><td data-i18n="repos.tools"></td></tr>
+              <tr><td><a class="mono" href="https://github.com/ariel5253/orderflow-engine-app">orderflow-engine-app</a></td><td data-i18n="repos.app"></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p data-i18n="footer.about"></p>
+        <p><span data-i18n="footer.author"></span> · <a href="https://github.com/ariel5253/orderflow-engine-api/blob/main/LICENSE" data-i18n="footer.license"></a></p>
+      </footer>
+    </main>
+  </div>
+  <noscript><p class="noscript">Esta página necesita JavaScript para mostrar sus textos. · This page needs JavaScript to show its texts.</p></noscript>
+</body>
+</html>
